@@ -8,11 +8,12 @@ namespace Esercizio3 {
 	class Program {
 		static void Main(string[] args) {
 					
-					int[] array3 = new int[50];
+					int[] array3 = new int[25];
+					
 
 
 
-					int[] array1 = {5,38,1,2,27,53,7, 12 , 4 ,23,53};
+					int[] array1 = {5,38,1,2,27,52,7, 12 , 4 ,23,53};
 					Console.WriteLine("Prima lista non ordinata :");
 					foreach(var uno in array1){
 					Console.WriteLine("{0} ", uno);
@@ -28,7 +29,7 @@ namespace Esercizio3 {
 					Console.WriteLine("Seconda lista non ordinata :");
 					foreach(var uno in array2){
 					Console.WriteLine("{0} ", uno);
-					
+					 
 					}
 					Bubble(array2);
 					Console.WriteLine("Seconda lista ordinata :");
@@ -37,16 +38,19 @@ namespace Esercizio3 {
 					
 					}
 
-					Console.WriteLine("Somma liste:");
-					for(int i=0; i <= array1.Length -1 ; i++){
-						array3[i] = array1[i];
-					}
-					
 
+
+					 Array.Copy(array1, 0, array3, 0, 11);
+					 Array.Copy(array2, 0, array3, 11, 14);
+					 Bubble(array3);
+					Console.WriteLine("Somma liste:");
 					foreach(var uno in array3){
 					Console.WriteLine("{0} ", uno);
-					}
 					
+					}
+
+						
+
 
 					
 
